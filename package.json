@@ -1,0 +1,30 @@
+{
+  "name": "react-quickstart",
+  "version": "0.0.0",
+  "description": "React project",
+  "main": "./server.js",
+  "browser": "./client.js",
+  "browserify": {
+    "transform": ["reactify"]
+  },
+  "dependencies": {
+    "browserify": "~3.26.0",
+    "connect-browserify": "~1.0.0",
+    "envify": "~0.2.0",
+    "express": "~3.4.8",
+    "node-jsx": "~0.2.1",
+    "react": "~0.8.0",
+    "react-async": "~0.3.0",
+    "react-async-middleware": "~0.1.1",
+    "react-router-component": "~0.2.1",
+    "reactify": "~0.7.0",
+    "node-dev": "~2.1.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node-dev --no-deps server.js"
+  },
+  "author": "",
+  "license": "MIT"
+}
