@@ -5,7 +5,9 @@
   "main": "./server.js",
   "browser": "./client.js",
   "browserify": {
-    "transform": ["reactify"]
+    "transform": [
+      "reactify"
+    ]
   },
   "dependencies": {
     "browserify": "~3.26.0",
@@ -18,7 +20,8 @@
     "react-async-middleware": "~0.1.1",
     "react-router-component": "~0.2.1",
     "reactify": "~0.7.0",
-    "node-dev": "~2.1.6"
+    "node-dev": "~2.1.6",
+    "superagent": "~0.16.0"
   },
   "devDependencies": {},
   "scripts": {
