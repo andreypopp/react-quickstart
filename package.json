@@ -10,20 +10,20 @@
     ]
   },
   "dependencies": {
-    "browserify": "~3.26.0",
-    "connect-browserify": "~1.0.0",
-    "envify": "~0.2.0",
+    "react": "~0.8.0",
+    "react-async": "~0.3.2",
+    "react-router-component": "~0.2.1",
     "express": "~3.4.8",
     "node-jsx": "~0.2.1",
-    "react": "~0.8.0",
-    "react-async": "~0.3.0",
-    "react-async-middleware": "~0.1.1",
-    "react-router-component": "~0.2.1",
-    "reactify": "~0.7.0",
-    "node-dev": "~2.1.6",
     "superagent": "~0.16.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "reactify": "~0.7.0",
+    "node-dev": "~2.1.6",
+    "envify": "~0.2.0",
+    "browserify": "~3.26.0",
+    "connect-browserify": "~1.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node-dev --no-deps server.js"

@@ -1,10 +1,22 @@
-var express         = require('express');
-var nodejsx         = require('node-jsx').install();
-var browserify      = require('connect-browserify');
-var ReactMiddleware  = require('react-async-middleware');
-var App             = require('./client');
+var express     = require('express');
+var url         = require('url');
+var browserify  = require('connect-browserify');
+var ReactAsync  = require('react-async');
+var nodejsx     = require('node-jsx').install();
+var App         = require('./client');
 
 var debug = process.env.NODE_ENV !== 'production';
+
+function renderApp(req, res, next) {
+  var path = url.parse(req.url).pathname;
+  var app = App({path: path});
+  ReactAsync.renderComponentToString(app, function(err, markup) {
+    if (err) {
+      return next(err);
+    }
+    res.send(markup);
+  });
+}
 
 var api = express()
   .get('/users/:username', function(req, res) {
@@ -14,5 +26,7 @@ var api = express()
 express()
   .get('/bundle.js', browserify('./client', {debug: debug, watch: debug}))
   .use('/api', api)
-  .use(ReactMiddleware(App))
-  .listen(3000);
+  .use(renderApp)
+  .listen(3000, function() {
+    console.log('Point your browser at http://localhost:3000');
+  });
