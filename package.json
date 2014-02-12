@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "react": "~0.8.0",
-    "react-async": "~0.3.2",
+    "react-async": "~0.3.3",
     "react-router-component": "~0.2.1",
     "express": "~3.4.8",
     "node-jsx": "~0.2.1",
