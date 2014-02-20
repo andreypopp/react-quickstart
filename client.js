@@ -19,7 +19,7 @@ var MainPage = React.createClass({
   render: function() {
     return (
       <div className="UserPage">
-        Hello, anonynous!
+        Hello, anonymous!
         <a href="/users/andrey">Login</a>
       </div>
     );
