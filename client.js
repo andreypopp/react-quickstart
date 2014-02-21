@@ -54,7 +54,7 @@ var App = React.createClass({
         <head>
           <script src="/bundle.js" />
         </head>
-        <Pages ref="router" onClick={this.onClick} path={this.props.path}>
+        <Pages ref="router" path={this.props.path}>
           <Page path="/" handler={MainPage} />
           <Page path="/users/:username" handler={UserPage} />
         </Pages>
