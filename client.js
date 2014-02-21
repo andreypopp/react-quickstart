@@ -11,6 +11,7 @@ var superagent  = require('superagent');
 
 var Pages       = Router.Pages;
 var Page        = Router.Page;
+var Link        = Router.Link;
 
 ReactMount.allowFullPageRender = true;
 
@@ -20,7 +21,7 @@ var MainPage = React.createClass({
     return (
       <div className="UserPage">
         Hello, anonymous!
-        <a href="/users/andrey">Login</a>
+        <Link href="/users/andrey">Login</Link>
       </div>
     );
   }
@@ -35,7 +36,7 @@ var UserPage = ReactAsync.createClass({
         cb(err, res ? res.body : null);
       });
   },
-  
+
   render: function() {
     return (
       <div className="MainPage">
@@ -47,13 +48,6 @@ var UserPage = ReactAsync.createClass({
 
 var App = React.createClass({
 
-  onClick: function(e) {
-    if (e.target.tagName === 'A') {
-      e.preventDefault();
-      this.refs.router.navigate(e.target.attributes.href.value);
-    }
-  },
-  
   render: function() {
     return (
       <html>
