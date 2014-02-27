@@ -6,12 +6,12 @@
 var React       = require('react');
 var ReactMount  = require('react/lib/ReactMount');
 var ReactAsync  = require('react-async');
-var Router      = require('react-router-component');
+var ReactRouter = require('react-router-component');
 var superagent  = require('superagent');
 
-var Pages       = Router.Pages;
-var Page        = Router.Page;
-var Link        = Router.Link;
+var Pages       = ReactRouter.Pages;
+var Page        = ReactRouter.Page;
+var Link        = ReactRouter.Link;
 
 ReactMount.allowFullPageRender = true;
 
@@ -21,7 +21,7 @@ var MainPage = React.createClass({
     return (
       <div className="UserPage">
         Hello, anonymous!
-        <Link href="/users/andrey">Login</Link>
+        <Link href="/users/doe">Login</Link>
       </div>
     );
   }
