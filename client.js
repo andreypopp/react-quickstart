@@ -20,8 +20,8 @@ var MainPage = React.createClass({
   render: function() {
     return (
       <div className="UserPage">
-        Hello, anonymous!
-        <Link href="/users/doe">Login</Link>
+        <h1>Hello, anonymous!</h1>
+        <p><Link href="/users/doe">Login</Link></p>
       </div>
     );
   }
@@ -41,7 +41,8 @@ var UserPage = React.createClass({
   render: function() {
     return (
       <div className="MainPage">
-        {this.state.username ? 'Hello, ' + this.state.username : 'Loading...'}
+        <h1>Hello, {this.state.name}!</h1>
+        <p><Link href="/">Logout</Link></p>
       </div>
     );
   }
@@ -53,9 +54,10 @@ var App = React.createClass({
     return (
       <html>
         <head>
-          <script src="/bundle.js" />
+          <link rel="stylesheet" href="/assets/style.css" />
+          <script src="/assets/bundle.js" />
         </head>
-        <Pages ref="router" path={this.props.path}>
+        <Pages className="App" path={this.props.path}>
           <Page path="/" handler={MainPage} />
           <Page path="/users/:username" handler={UserPage} />
         </Pages>
