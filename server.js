@@ -10,7 +10,7 @@ var debug = process.env.NODE_ENV !== 'production';
 function renderApp(req, res, next) {
   var path = url.parse(req.url).pathname;
   var app = App({path: path});
-  ReactAsync.renderComponentToString(app, function(err, markup) {
+  ReactAsync.renderComponentToStringWithAsyncState(app, function(err, markup) {
     if (err) {
       return next(err);
     }

@@ -27,7 +27,8 @@ var MainPage = React.createClass({
   }
 });
 
-var UserPage = ReactAsync.createClass({
+var UserPage = React.createClass({
+  mixins: [ReactAsync.Mixin],
 
   getInitialStateAsync: function(cb) {
     superagent.get(
@@ -67,6 +68,6 @@ module.exports = App;
 
 if (typeof window !== 'undefined') {
   window.onload = function() {
-    ReactAsync.renderComponent(App(), document);
+    React.renderComponent(App(), document);
   }
 }
