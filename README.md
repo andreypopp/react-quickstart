@@ -36,7 +36,7 @@ assets and provide a stub for a REST API.
 
 After cloning a git repo, run:
 
-    % npm run install
+    % npm install
 
 to install all needed dependencies and then:
 
