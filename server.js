@@ -33,8 +33,8 @@ var app = express();
 if (development) {
   app.get('/assets/bundle.js',
     browserify('./client', {
-      debug: development,
-      watch: development
+      debug: true,
+      watch: true
     }));
 }
 
