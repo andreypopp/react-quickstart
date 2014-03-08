@@ -19,7 +19,7 @@ var MainPage = React.createClass({
 
   render: function() {
     return (
-      <div className="UserPage">
+      <div className="MainPage">
         <h1>Hello, anonymous!</h1>
         <p><Link href="/users/doe">Login</Link></p>
       </div>
@@ -40,7 +40,7 @@ var UserPage = React.createClass({
 
   render: function() {
     return (
-      <div className="MainPage">
+      <div className="UserPage">
         <h1>Hello, {this.state.name}!</h1>
         <p><Link href="/">Logout</Link></p>
       </div>
