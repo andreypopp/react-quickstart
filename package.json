@@ -6,7 +6,7 @@
   "browser": "./client.js",
   "browserify": {
     "transform": [
-      "reactify"
+      ["reactify", {"harmony": true}]
     ]
   },
   "dependencies": {
@@ -22,7 +22,7 @@
     "reactify": "~0.10.0",
     "node-dev": "~2.1.6",
     "envify": "~1.2.0",
-    "browserify": "~3.26.0",
+    "browserify": "~3.32.1",
     "connect-browserify": "~2.0.0",
     "uglifyjs": "~2.3.6"
   },
