@@ -23,7 +23,7 @@
     "envify": "~1.2.0",
     "browserify": "~3.32.1",
     "connect-browserify": "~2.0.0",
-    "uglifyjs": "~2.3.6",
+    "uglify-js": "~2.4.13",
     "supervisor": "~0.5.7"
   },
   "scripts": {
