@@ -11,6 +11,7 @@ var superagent  = require('superagent');
 
 var Pages       = ReactRouter.Pages;
 var Page        = ReactRouter.Page;
+var NotFound    = ReactRouter.NotFound;
 var Link        = ReactRouter.Link;
 
 ReactMount.allowFullPageRender = true;
@@ -67,6 +68,15 @@ var UserPage = React.createClass({
   }
 });
 
+var NotFoundHandler = React.createClass({
+
+  render: function() {
+    return (
+      <p>Page not found</p>
+    );
+  }
+});
+
 var App = React.createClass({
 
   render: function() {
@@ -79,6 +89,7 @@ var App = React.createClass({
         <Pages className="App" path={this.props.path}>
           <Page path="/" handler={MainPage} />
           <Page path="/users/:username" handler={UserPage} />
+          <NotFound handler={NotFoundHandler} />
         </Pages>
       </html>
     );
