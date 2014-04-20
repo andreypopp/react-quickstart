@@ -31,21 +31,23 @@ var MainPage = React.createClass({
 var UserPage = React.createClass({
   mixins: [ReactAsync.Mixin],
 
-  getUserInfo: function(username, cb) {
-    superagent.get(
-      'http://localhost:3000/api/users/' + username,
-      function(err, res) {
-        cb(err, res ? res.body : null);
-      });
+  statics: {
+    getUserInfo: function(username, cb) {
+      superagent.get(
+        'http://localhost:3000/api/users/' + username,
+        function(err, res) {
+          cb(err, res ? res.body : null);
+        });
+    }
   },
-
+  
   getInitialStateAsync: function(cb) {
-    this.getUserInfo(this.props.username, cb);
+    this.type.getUserInfo(this.props.username, cb);
   },
 
   componentWillReceiveProps: function(nextProps) {
     if (this.props.username !== nextProps.username) {
-      this.getUserInfo(nextProps.username, function(err, info) {
+      this.type.getUserInfo(nextProps.username, function(err, info) {
         if (err) {
           throw err;
         }
