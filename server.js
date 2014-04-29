@@ -15,7 +15,7 @@ function renderApp(req, res, next) {
     if (err) {
       return next(err);
     }
-    res.send(markup);
+    res.send('<!doctype html>\n' + markup);
   });
 }
 
