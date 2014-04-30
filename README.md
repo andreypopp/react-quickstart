@@ -58,7 +58,7 @@ which will produce `assets/bundle.js` build, then:
     % npm run start-prod
 
 to start server in "production" mode (no source code watching and serving
-optmized bundle to browser).
+optimized bundle to browser).
 
 [react-router-component]: http://andreypopp.viewdocs.io/react-router-component
 [react-async]: http://andreypopp.viewdocs.io/react-async
