@@ -13,18 +13,18 @@
     "react": "~0.10.0",
     "react-async": "~0.9.1",
     "react-router-component": "~0.18.2",
-    "express": "~3.4.8",
-    "node-jsx": "~0.9.0",
-    "superagent": "~0.17.0",
+    "express": "~4.1.1",
+    "node-jsx": "~0.10.0",
+    "superagent": "~0.18.0",
     "fibers": "~1.0.1"
   },
   "devDependencies": {
-    "reactify": "~0.10.0",
+    "reactify": "~0.13.1",
     "envify": "~1.2.0",
-    "browserify": "~3.32.1",
+    "browserify": "~3.44.2",
     "connect-browserify": "~2.0.1",
     "uglify-js": "~2.4.13",
-    "supervisor": "~0.5.7"
+    "supervisor": "~0.6.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
