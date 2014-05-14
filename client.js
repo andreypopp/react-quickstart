@@ -4,7 +4,6 @@
 
 
 var React       = require('react');
-var ReactMount  = require('react/lib/ReactMount');
 var ReactAsync  = require('react-async');
 var ReactRouter = require('react-router-component');
 var superagent  = require('superagent');
@@ -13,8 +12,6 @@ var Pages       = ReactRouter.Pages;
 var Page        = ReactRouter.Page;
 var NotFound    = ReactRouter.NotFound;
 var Link        = ReactRouter.Link;
-
-ReactMount.allowFullPageRender = true;
 
 var MainPage = React.createClass({
 
