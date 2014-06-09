@@ -32,13 +32,13 @@ var UserPage = React.createClass({
   statics: {
     getUserInfo: function(username, cb) {
       superagent.get(
-        'http://localhost:3000/api/users/' + username,
+        '/api/users/' + username,
         function(err, res) {
           cb(err, res ? res.body : null);
         });
     }
   },
-  
+
   getInitialStateAsync: function(cb) {
     this.type.getUserInfo(this.props.username, cb);
   },
