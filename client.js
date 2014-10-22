@@ -31,6 +31,16 @@ var UserPage = React.createClass({
 
   statics: {
     getUserInfo: function(username, cb) {
+      /*
+       * The use of localhost URLs work as long as the browser is running on the same machine as the server,
+       * a typical development setup.
+       * As soon as you want to run this code on public facing machines, each server will need to know it's 
+       * own hostname and port (which is ugly).
+       * Relative paths cannot work for serverside rendering, as that has no page context.
+       * More discussion of this issue, and solutions, can be found at:
+       *   https://github.com/andreypopp/react-async/issues/34
+       *   http://stackoverflow.com/questions/26463924/getting-rid-of-localhost3000-urls-for-reactasync
+       */
       superagent.get(
         'http://localhost:3000/api/users/' + username,
         function(err, res) {
